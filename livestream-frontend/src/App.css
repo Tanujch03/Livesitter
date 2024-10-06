@@ -1,0 +1,349 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+h2 {
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+/* Overlay form styles */
+.overlay-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.overlay-form input[type="text"],
+.overlay-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.overlay-form button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.overlay-form button:hover {
+  background-color: #2980b9;
+}
+
+.overlay-form button + button {
+  margin-left: 10px;
+  background-color: #e74c3c;
+}
+
+.overlay-form button + button:hover {
+  background-color: #c0392b;
+}
+
+/* Content wrapper styles */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.player-wrapper {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.player-wrapper iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Overlay styles */
+.overlay {
+  background-color: transparent; /* Remove background color */
+  border: 2px solid #d5db34;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Add this for absolute positioning of buttons */
+  overflow: hidden; /* Ensure buttons don't overflow */
+}
+
+.overlay-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overlay-logo {
+  max-width: 100%;
+  max-height: 70%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.overlay-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.overlay-buttons button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.overlay-buttons button:hover {
+  background-color: #2980b9;
+}
+
+.overlay-buttons button:last-child {
+  background-color: #e74c3c;
+}
+
+.overlay-buttons button:last-child:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .player-wrapper {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .overlay-form button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .overlay-form button + button {
+    margin-left: 0;
+  }
+}
+
+/* Update the overlay and overlay-buttons styles */
+.overlay {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #3498db;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Add this for absolute positioning of buttons */
+  overflow: hidden; /* Ensure buttons don't overflow */
+}
+
+.overlay-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overlay-logo {
+  max-width: 100%;
+  max-height: 70%;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.overlay-buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.overlay:hover .overlay-buttons {
+  transform: translateY(0);
+}
+
+.overlay-buttons button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.overlay-buttons button:hover {
+  background-color: #2980b9;
+}
+
+.overlay-buttons button:last-child {
+  background-color: #e74c3c;
+}
+
+.overlay-buttons button:last-child:hover {
+  background-color: #c0392b;
+}
+/* Full-screen overlay */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darken background */
+  z-index: 9999; /* Ensure it's on top */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  pointer-events: none; /* So clicks pass through to the video */
+}
+
+/* Ensure the buttons still work properly in full screen */
+.fullscreen-overlay .overlay-buttons {
+  position: absolute;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* Darker button background */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.fullscreen-overlay .overlay-buttons button {
+  margin: 0 10px;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+/* Add a transition to the overlay for a smooth effect */
+.fullscreen-overlay {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.overlay {
+  background-color: transparent; /* Remove background color */
+  border: 2px solid #3498db;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Add this for absolute positioning of buttons */
+  overflow: hidden; /* Ensure buttons don't overflow */
+}
+
+.overlay-buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Darken the buttons area */
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.overlay:hover .overlay-buttons {
+  transform: translateY(0);
+}
+
+.overlay-buttons button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.overlay-buttons button:hover {
+  background-color: #2980b9;
+}
+
+.overlay-buttons button:last-child {
+  background-color: #e74c3c;
+}
+
+.overlay-buttons button:last-child:hover {
+  background-color: #c0392b;
+}
