@@ -99,7 +99,7 @@ h2 {
 /* Overlay styles */
 .overlay {
   background-color: transparent; /* Remove background color */
-  border: 2px solid #d5db34;
+  border: none; /* Remove the blue border */
   border-radius: 6px;
   padding: 10px;
   display: flex;
@@ -123,11 +123,12 @@ h2 {
 }
 
 .overlay-logo {
-  max-width: 100%;
-  max-height: 70%;
-  object-fit: cover;
-  margin-bottom: 10px;
+  width: 100%; /* Make the logo take the full width of the overlay */
+  max-height: 70%; /* Maintain the maximum height */
+  object-fit: cover; /* Ensure the logo scales correctly */
+  margin-bottom: 10px; /* Maintain some spacing below the logo */
 }
+
 
 .overlay-buttons {
   display: flex;
@@ -183,7 +184,7 @@ h2 {
 /* Update the overlay and overlay-buttons styles */
 .overlay {
   background-color: rgba(255, 255, 255, 0.9);
-  border: 2px solid #3498db;
+  border: none; /* Remove the blue border */
   border-radius: 6px;
   padding: 10px;
   display: flex;
@@ -207,11 +208,12 @@ h2 {
 }
 
 .overlay-logo {
-  max-width: 100%;
-  max-height: 70%;
-  object-fit: contain;
-  margin-bottom: 10px;
+  width: 100%; /* Make the logo take the full width of the overlay */
+  max-height: 70%; /* Maintain the maximum height */
+  object-fit: contain; /* Ensure the logo scales correctly */
+  margin-bottom: 10px; /* Maintain some spacing below the logo */
 }
+
 
 .overlay-buttons {
   position: absolute;
@@ -293,7 +295,7 @@ h2 {
 }
 .overlay {
   background-color: transparent; /* Remove background color */
-  border: 2px solid #3498db;
+  border: none; /* Remove the blue border */
   border-radius: 6px;
   padding: 10px;
   display: flex;
