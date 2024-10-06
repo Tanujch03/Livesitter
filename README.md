@@ -8,4 +8,4 @@ npm install video-react
 npm install axios
 npm start
 ```
-<p>Access the server http://localhost:3000/</p>
+<p>Access the server ```http://localhost:3000```</p>
